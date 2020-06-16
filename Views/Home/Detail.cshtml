@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Form Page";
+}
+@model Dishes
+
+<h1>
+    @Model.Name
+</h1>
+<h3>
+    @Model.Chef
+</h3>
+
+<hr>
+
+@Model.Description
+
+<p>
+    Calories: @Model.Calories
+</p>
+<p>
+    Tasiness: @Model.Tastiness
+</p>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+    <a class="btn btn-info" href="/delete/@Model.DishId">Delete</a>
+    <a class="btn btn-info" href="/edit/@Model.DishId">Edit</a>
+    <a class="btn btn-info" href="/">Home</a>
+</div>
